@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct MainButton: View {
     var void: (() -> Void)? = nil
     var body: some View {
         Button {
@@ -18,7 +18,7 @@ struct SwiftUIView: View {
                 .frame(maxWidth: .infinity)
                 .background(Color.main)
                 .foregroundStyle(Color.white)
-                .font(.system(size: 21, weight: .medium))
+                .font(.system(size: 20, weight: .medium))
                 .cornerRadius(10)
         }
 
@@ -26,7 +26,7 @@ struct SwiftUIView: View {
 }
 
 #Preview {
-    SwiftUIView {
+    MainButton {
         print("deneme")
     }
 }
