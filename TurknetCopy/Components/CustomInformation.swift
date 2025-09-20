@@ -10,22 +10,21 @@ import SwiftUI
 struct CustomInformation: View {
     let text: String
     var body: some View {
-        HStack{
-            Text("\(text)")
+        HStack(spacing: 13) {
+            Rectangle()
+                .fill(Color.main)
+                .frame(width: 5)
+                .frame(height: 75)// çizginin kalınlığı
+            Text(text)
                 .font(.system(size: 13))
-                .foregroundStyle(Color.black).opacity(0.6)
+                .foregroundStyle(Color.black.opacity(0.6))
                 .multilineTextAlignment(.leading)
+                .padding(.trailing, 20)
+            
         }
-        .padding()
         .background(Color.main.opacity(0.17))
         .clipShape(RoundedRectangle(cornerRadius: 5))
-        .frame(maxWidth: .infinity)
-        .overlay(
-               RoundedRectangle(cornerRadius: 2)
-                   .fill(Color.main)
-                   .frame(width: 9),   // çizginin kalınlığı
-               alignment: .leading// sola hizalama
-           )
+        .frame(alignment: .leading)
     }
 }
 

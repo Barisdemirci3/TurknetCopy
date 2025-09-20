@@ -18,7 +18,7 @@ struct MainButton: View {
                 .frame(maxWidth: .infinity)
                 .background(Color.main)
                 .foregroundStyle(Color.white)
-                .font(.system(size: 20, weight: .medium))
+                .font(.system(size: 16, weight: .medium))
                 .cornerRadius(10)
         }
 
