@@ -68,22 +68,8 @@ struct Price: View {
                 .font(.system(size: 13))
                 .padding(.top)
             }.padding([.top, .bottom])
-            HStack{
-                Text("Otomatik ödeme talimatınız var. Faturanız ödeme tarihi geldiğinde otomatik olarak ödenecektir")
-                    .font(.system(size: 13))
-                    .foregroundStyle(Color.black).opacity(0.6)
-                    .multilineTextAlignment(.leading)
-            }
-            .padding()
-            .background(Color.main.opacity(0.17))
-            .frame(maxWidth: .infinity)
-            .clipShape(RoundedRectangle(cornerRadius: 5))
-            .overlay(
-                   RoundedRectangle(cornerRadius: 2)
-                       .fill(Color.main)
-                       .frame(width: 9),   // çizginin kalınlığı
-                   alignment: .leading// sola hizalama
-               )
+          // buraya info
+            CustomInformation(text: "Otomatik ödeme talimatınız var. Faturanız ödeme tarihi geldiğinde otomatik olarak ödenecektir")
             VStack{
                 Text("💡 Abonelik ücretleri, her dönemin başlangıcında faturalanır ve hesabınızda görüntülenmesi fatura tarihinden itibaren ") + Text("1 haftayı").bold() + Text(" bulabilir")
             }
