@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct TurknetCopyApp: App {
+    init() {
+        UITextField.appearance().attributedPlaceholder = NSAttributedString(
+            string: "İşlem veya Sayfa Ara",
+            attributes: [.foregroundColor: UIColor.black]
+        )
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
